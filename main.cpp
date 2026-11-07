@@ -479,9 +479,9 @@ void corregirarchivo(char ruta[50])
                 cin>>k.siguientey;
                 cout<<"ingrese si hay despegue:";
                 cin>>k.despegue;
-                cout<<"ingrese si quiere lanzar granda;";
+                cout<<"ingrese si quiere lanzar granada:";
                 cin>>k.granada1;
-                cout<<"ingrese si quiere lanzar granda2:";
+                cout<<"ingrese si quiere lanzar granada2:";
                 cin>>k.granada2;
                 cout<<"ingrese si desea esperar:";
                 cin>>k.espera;
@@ -556,9 +556,9 @@ void mostrartabla(orden tabla[DIM][DIM])
                 if(tabla[i][k].espera)
                     cout << "ESPERA" << endl;
                 if(tabla[i][k].granada1)
-                    cout << "tiro granada 1" << endl;
+                    cout << "TIRO GRANADA 1" << endl;
                 if(tabla[i][k].granada2)
-                    cout << "tiro granada 2" << endl;
+                    cout << "TIRO GRANADA 2" << endl;
                 if(tabla[i][k].aterrizaje)
                     cout << "ATERRIZO" << endl;
                 if(tabla[i][k].kamikaze)
@@ -599,9 +599,9 @@ void  creararchivo(char ruta[50])
             cin>>k.granada2;
             cout<<"ingrese si desea esperar:";
             cin>>k.espera;
-            cout<<"ingrese si quiere realizar un ataque kamikaze;";
+            cout<<"ingrese si quiere realizar un ataque kamikaze:";
             cin>>k.kamikaze;
-            cout<<"ingrese si quiere aterrizar;";
+            cout<<"ingrese si quiere aterrizar:";
             cin>>k.aterrizaje;
             fwrite(&k,sizeof(ordenarchivo),1,f);
             cout<<"quiere finalizar de ingresar registros?(1-si 0-no)";
