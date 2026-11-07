@@ -119,7 +119,7 @@ void cargartabla(char ruta[50], orden tabla[DIM][DIM])
     fseek(f, 0, SEEK_SET);
     if(!despeguevalido || !validoaterrizaje)
     {
-        cout << "el aterrizaje o el despegue estan mal-------" << endl;
+        cout << "El aterrizaje o el despegue estan mal-------" << endl;
     }
 
     if(despeguevalido && validoaterrizaje) //las validaciones solo las pongo en false si hubo un error ya que sino nunca las toco
@@ -242,7 +242,7 @@ void cargartabla(char ruta[50], orden tabla[DIM][DIM])
 
                 if(paso)
                 {
-                    cout << "paso dos veces por una posicion=" << endl;
+                    cout << "Paso dos veces por una posicion=" << endl;
                 }
             }
         }
@@ -418,7 +418,7 @@ void corregirtabla(orden tabla[DIM][DIM])
     int x;
     int y;
     orden k;
-    cout << "ingrese la posicion de la tabla que desea modificar" << endl;
+    cout << "Ingrese la posicion de la tabla que desea modificar" << endl;
     cout << "x=";
     cin >> x;
     cout << "y=";
@@ -446,7 +446,7 @@ void corregirtabla(orden tabla[DIM][DIM])
     }
     else
     {
-        cout << "esos indices no existen" << endl;
+        cout << "Esos indices no existen" << endl;
     }
 }
 void corregirarchivo(char ruta[50])
@@ -458,7 +458,7 @@ void corregirarchivo(char ruta[50])
     bool encontro=false;
     if(f=fopen(ruta,"rb+"))
     {
-        cout<<"ingrese las coordenadas del regitro del archivo que desea modificar"<<endl;
+        cout<<"Ingrese las coordenadas del regitro del archivo que desea modificar"<<endl;
         cout<<"x=";
         cin>>x;
         cout<<"y=";
@@ -583,28 +583,28 @@ void  creararchivo(char ruta[50])
     {
         while(!finalizo)
         {
-            cout<<"ingrese la coordenada x=";
+            cout<<"Ingrese la coordenada x=";
             cin>>k.x;
-            cout<<"ingrese la coordenada en y=";
+            cout<<"Ingrese la coordenada en y=";
             cin>>k.y;
-            cout<<"ingrese el siguiente x=";
+            cout<<"Ingrese el siguiente x=";
             cin>>k.siguientex;
-            cout<<"ingrese el siguiente y=";
+            cout<<"Ingrese el siguiente y=";
             cin>>k.siguientey;
-            cout<<"ingrese si hay despegue:";
+            cout<<"Ingrese si hay despegue:";
             cin>>k.despegue;
-            cout<<"ingrese si quiere lanzar granada;";
+            cout<<"Ingrese si quiere lanzar granada;";
             cin>>k.granada1;
-            cout<<"ingrese si quiere lanzar granada 2";
+            cout<<"Ingrese si quiere lanzar granada 2";
             cin>>k.granada2;
-            cout<<"ingrese si desea esperar:";
+            cout<<"Ingrese si desea esperar:";
             cin>>k.espera;
-            cout<<"ingrese si quiere realizar un ataque kamikaze:";
+            cout<<"Ingrese si quiere realizar un ataque kamikaze:";
             cin>>k.kamikaze;
-            cout<<"ingrese si quiere aterrizar:";
+            cout<<"Ingrese si quiere aterrizar:";
             cin>>k.aterrizaje;
             fwrite(&k,sizeof(ordenarchivo),1,f);
-            cout<<"quiere finalizar de ingresar registros?(1-si 0-no)";
+            cout<<"Quiere finalizar de ingresar registros?(1-si 0-no)";
             cin>>finalizo;
         }
         fclose(f);
@@ -667,7 +667,7 @@ int main()
         {
         case 1:
         {
-            cout<<"ingrese la ruta del archivo a leer:";
+            cout<<"Ingrese la ruta del archivo a leer:";
             cin>>ruta;
             cargartabla(ruta,tabla);
         }
@@ -679,14 +679,14 @@ int main()
         break;
         case 3:
         {
-            cout<<"ingrese la ruta del archivo:";
+            cout<<"Ingrese la ruta del archivo:";
             cin>>ruta;
             creararchivo(ruta);
         }
         break;
         case 4:
         {
-            cout<<"ingrese la ruta del archivo a corregir:";
+            cout<<"Ingrese la ruta del archivo a corregir:";
             cin>>ruta;
             corregirarchivo(ruta);
         }
@@ -703,14 +703,14 @@ int main()
         break;
         case 7:
         {
-            cout<<"ingrese la ruta del archivo:";
+            cout<<"Ingrese la ruta del archivo:";
             cin>>ruta;
             visualizarArchivoHtml(ruta,tabla);
         }
         break;
         case 8:
         {
-            cout<<"ingrese la ruta del archivo:";
+            cout<<"Ingrese la ruta del archivo:";
             cin>>ruta;
             mostrararchivo(ruta);
         }
