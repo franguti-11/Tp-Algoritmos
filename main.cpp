@@ -96,7 +96,7 @@ void cargartabla(char ruta[50], orden tabla[DIM][DIM])
         if(x.aterrizaje == true && x.kamikaze == true)
         {
             validoaterrizaje = false;
-        }// si hay un despegue suma uno y si viene acompañado de una instruccion no es valido
+        }// si hay un despegue suma uno y si viene acompaÃ±ado de una instruccion no es valido
         if(x.aterrizaje != x.kamikaze) // si los dos estan iguales cantidad de despejes no aumenta,ya que los dos juntos esta mal y si no hay ninguno cantidad nunca llega 1,ademas verifico que no vengan con ninguna instruccion
         {
             cantidadaterrizaje++;
@@ -411,7 +411,7 @@ void visualizarArchivoHtml(char *nombreArchivo, orden tabla[DIM][DIM])
     fprintf(archivo, "</html>\n");
 
     fclose(archivo);
-    cout << "¡Archivo HTML '" << nombreArchivo << "' generado con exito!" << endl;
+    cout << "Â¡Archivo HTML '" << nombreArchivo << "' generado con exito!" << endl;
 }
 void corregirtabla(orden tabla[DIM][DIM])
 {
@@ -458,7 +458,7 @@ void corregirarchivo(char ruta[50])
     bool encontro=false;
     if(f=fopen(ruta,"rb+"))
     {
-        cout<<"ingrese las coordenadas del regitro del archivo que deseamodificar"<<endl;
+        cout<<"ingrese las coordenadas del regitro del archivo que desea modificar"<<endl;
         cout<<"x=";
         cin>>x;
         cout<<"y=";
